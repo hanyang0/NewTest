@@ -53,7 +53,7 @@ terrainProvider : Cesium.createWorldTerrain()
 // });
 
 
-
+//
 var options = {
   camera : viewer.scene.camera,
   canvas : viewer.scene.canvas,
@@ -68,11 +68,6 @@ viewer.dataSources.add(Cesium.KmlDataSource.load('Smx2_PS_60_1_LayerToKML.kmz', 
       viewer.selectedEntity = viewer.trackedEntity;
       viewer.clock.multiplier = 30;
       viewer.clock.shouldAnimate = true;
-      viewer.zoomTo(dataSource.entities,new Cesium.HeadingPitchRange(
-                  0.0,
-                  -0.5,
-                  0)
-      );
       // viewer.zoomTo(
       //   rider,
       //     new Cesium.HeadingPitchRange(
@@ -84,7 +79,16 @@ viewer.dataSources.add(Cesium.KmlDataSource.load('Smx2_PS_60_1_LayerToKML.kmz', 
       // ;
   });
 });
-
+viewer.camera.setView({
+  destination: Cesium.Cartesian3.fromDegrees(110.778717, 34.380581, 1500),
+  orientation: {
+      // 指向
+      heading: 6.283185307179581,
+      // 视角
+      pitch: -1.5688168484696687,
+      roll: 0.0
+  }
+});
 
 
 
