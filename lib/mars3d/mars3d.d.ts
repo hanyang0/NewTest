@@ -1,6 +1,8 @@
 /**
  * 国内偏移坐标系 枚举
  */
+import * as Cesium from "cesium";
+
 declare const enum ChinaCRS {
     /**
      * 标准无偏坐标系
@@ -19264,6 +19266,8 @@ declare module "PointTrans" {
  * 单个坐标或位置矩阵相关的处理 静态方法
  */
 declare module "PointUtil" {
+    import * as Cesium from "cesium";
+
     /**
      * 获取PointTrans中对应的坐标转换方法
      * srcCoordType 转 dstCoordType 对应的方法名称
