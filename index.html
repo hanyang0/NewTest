@@ -1,124 +1,309 @@
-<html>
- <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <link rel="shortcut icon" href="images/rc.png" type="image/x-icon">
-  <title>水利大数据平台登陆</title> 
-  <link href="css/style1.css" rel="stylesheet" type="text/css"> 
-  <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>  
-</head>
- <body onLoad="sendRequest()">
-  <div class="videozz"></div> 
-  <video autoplay muted loop poster=""> 
-   <source src=""> 你的游览器不支持video支持 
-  </video> 
-  <div class="box"> 
-   <div class="box-a"> 
-    <div class="m-2"> 
-     <div class="m-2-1"> 
-      <form action="#" method="post"> 
-       <div class="m-2-2"> 
-        <input type="text" placeholder="请输入账号"> 
-       </div> 
-       <div class="m-2-2"> 
-        <input type="password" placeholder="请输入密码"> 
-       </div> 
-       <div class="m-2-2-1"> 
-        <input type="text" placeholder="请输入验证码"> 
-        <img src="images/1.png"> 
-       </div> 
-       <div class="m-2-2"> 
-       <!-- <button type="submit" value="登陆">登陆</button> -->
-        <button type="button" value="登陆" onclick="window.location.href='index2.html'" >登陆</button>  
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
 
-       </div> 
-      </form> 
-        <div class="m-2-3" >
-        <div class="m-100">
-          Copyright©2021华北水利水电大学刘文锴团队版权所有
-        </div></div> 
-     </div> 
-    </div> 
-    <div class="m-5"> 
-     <div id="m-5-id-1"> 
-      <div id="m-5-2"> 
-       <div id="m-5-id-2"> 
-       </div> 
-       <div id="m-5-id-3"></div> 
-      </div> 
-     </div> 
-    </div> 
-    <div class="m-10"></div> 
-    <div class="m-xz7"></div> 
-    <div class="m-xz8 xzleft"></div> 
-    <div class="m-xz9"></div> 
-    <div class="m-xz9-1"></div> 
-    <!-- <div class="m-x10"></div>
-    <div class="m-x11"></div>
-    <div class="m-x12 xzleft"></div>
-    <div class="m-x13"></div>
-    <div class="m-x14 xzleft"></div>
-    <div class="m-x15"></div>
-    <div class="m-x16 xzleft"></div>--> 
-    <div class="m-x17 xzleft"></div> 
-    <div class="m-x18"></div> 
-    <div class="m-x19 xzleft"></div> 
-    <div class="m-x20"></div> 
-    <div class="m-8"></div> 
-    <div class="m-9">
-     <div class="masked1" id="sx8">
-      水利大数据平台
-     </div>
-     <div class="masked1" id="sx8" >
-       
-      <!-- Copyright©2020  -->
-      
-     </div>
-    </div> 
-    <div class="m-11"> 
-     <div class="m-k-1">
-      <div class="t1"></div>
-     </div> 
-     <div class="m-k-2">
-      <div class="t2"></div>
-     </div> 
-     <div class="m-k-3">
-      <div class="t3"></div>
-     </div> 
-     <div class="m-k-4">
-      <div class="t4"></div>
-     </div> 
-     <div class="m-k-5">
-      <div class="t5"></div>
-     </div> 
-     <div class="m-k-6">
-      <div class="t6"></div>
-     </div> 
-     <div class="m-k-7">
-      <div class="t7"></div>
-     </div> 
-    </div> 
-    <div class="m-14">
-     <div class="ss"></div>
-    </div> 
-    <div class="m-15-a"> 
-     <div class="m-15-k"> 
-      <div class="m-15xz1"> 
-       <div class="m-15-dd2"></div> 
-      </div> 
-     </div> 
-    </div> 
-    <div class="m-16"></div> 
-    <div class="m-17"></div> 
-    <div class="m-18 xzleft"></div> 
-    <div class="m-19"></div> 
-    <div class="m-20 xzleft"></div> 
-    <div class="m-21"></div> 
-    <div class="m-22"></div> 
-    <div class="m-23 xzleft"></div> 
-    <div class="m-24" id="localtime"></div> 
-   </div> 
-  </div> 
-  <script src="js/common.min.js"></script>   
- </body>
+<head>
+    <link rel="shortcut icon" href="images/rc.png" type="image/x-icon">
+    <title>水利大数据平台</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- 移动设备 viewport -->
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <meta name="author" content=" ">
+    <script type="text/javascript" src="lib/include-lib.js" libpath="lib/"
+            include="jquery,font-awesome,bootstrap,layer,haoutil,turf,bootstrap-slider,mars3d,mars3d-echarts,echarts-gl,bootstrap-checkbox"></script>
+    <link href="css/style.css" rel="stylesheet"/>
+    <link href="css/btnbar.css" rel="stylesheet"/>
+    <script src="js/btnbar.js"></script>
+    <link href="css/dygraph.css" rel="stylesheet"/>
+    <script src="js/dygraph.js"></script>
+    <script src="/js/common.js"></script>
+ <!--   <script src="lib/Cesium/Cesium.js"></script>-->
+
+    <script type="text/javascript" src="js/XbsjEarth/XbsjEarth.js"></script>
+    <script type="text/javascript" src="js/XbsjCesium/XbsjCesium.js"></script>
+    <script type="text/javascript" src="lib/mars3d/plugins/compatible/cesium-version.js"></script>
+    <!-- 图层管理相关处理js -->
+<script type="text/javascript" src="js/graphicManager.js"></script>
+<link href="css/divGraphic1.css" rel="stylesheet"/>
+<link rel="stylesheet" href="css/f45_vline.css"/>
+<script src="js/f45_vline.js"></script>
+<style>
+    .Loading {
+        background-color: black;
+        font-size: 100px;
+        width: 100%;
+        overflow: hidden;
+        position: fixed;
+        text-align: center;
+        top: 40%;
+        z-index: 99870101;
+    }
+</style>
+</head>
+<body class="dark">
+
+<div class="Loading">加载中...</div>
+<div id="mars3dContainer" class="mars3d-container"></div>
+<div id="viewSL" class="infoview" style="display:none;">
+    示例：
+    <input type="button" class="btn btn-primary" value="北斗卫星" onclick="showBDWeixinDemo()"/>
+    <input type="button" class="btn btn-primary" value="火箭发射" onclick="showHuojianDemo()"/>
+    <input type="button" class="btn btn-primary" value="一带一路" onclick="showOneRoad()"/>
+    <input type="button" class="btn btn-primary" value="动态河流" onclick="showRiver()"/>
+    <input type="button" class="btn btn-primary" value="城市模型" onclick="showOsm()"/>
+    <input type="button" class="btn btn-primary" value="人口迁移" onclick="showPM()"/>
+    <input type="button" class="btn btn-primary" value="统计柱状图" onclick="showGDP()"/>
+    <input type="button" class="btn btn-primary" value="人口统计" onclick="showData()"/>
+    <input type="button" class="btn btn-primary" value="水闸放水" onclick="showWaterP()"/>
+    <input type="button" class="btn btn-primary" value="大坝变形" onclick="showline()"/>
+    <input type="button" class="btn btn-primary" value="煤矿变形" onclick="showkmlsmk()"/>
+    <input type="button" class="btn btn-primary" value="变形折线图" onclick="showkmls()"/>
+    <input type="button" class="btn btn-primary" value="倾斜模型" onclick="showmodule()"/>
+
+
+</div>
+<div id="viewSL1" class="infoview5" style="display:none;" >
+</div>
+<div id="showriver" class="infoview2" style="display:none;">
+    <span style="color: #cad1d1">建议：顺着水流方向选点，直线时多采集点</span>
+
+    <table class="mars-table">
+        <tr>
+            <td class="nametd">河宽度(米)：</td>
+            <td>
+                <label for="txtWidth"></label><input type="number" class="form-control" id="txtWidth" value="280"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="nametd">河高度(米)：</td>
+            <td>
+                <label for="txtHeight"></label><input type="number" class="form-control" id="txtHeight" value="30"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="nametd">水流速(米/秒)：</td>
+            <td>
+                <label for="txtSpeed"></label><input id="txtSpeed" type="text"/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input id="btnDrawLine" type="button" class="btn btn-primary" value="绘制河流"/>
+                <input id="btnAddHeight" type="button" class="btn btn-primary" value="升高30米动画"/>
+                <input id="btnLowerHeight" type="button" class="btn btn-primary" value="降低30米动画"/>
+                <input id="btnClear" type="button" class="btn btn-danger" value="清除"/>
+            </td>
+        </tr>
+    </table>
+</div>
+<div id="loadlegend" class="mars-load-legend" style="display:none;">
+    <p class="mars-load-head">One Belt One Road 图例</p>
+    <ul class="mars-load-introduce">
+        <li>
+                    <span class="mars-load-introduce-dai">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </span>
+            <div class="mars-load-info">
+                <p>丝绸之路经济带</p>
+                <p>Silk Road Economic Belt</p>
+            </div>
+        </li>
+        <li>
+                    <span class="mars-load-introduce-lu">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </span>
+            <div class="mars-load-info">
+                <p>21世纪海上丝绸之路</p>
+                <p>21st century Maritime Silk Road</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="populationView" id="popv" style="visibility: hidden;">
+    <!-- 实有人口hidden="hidden"> -->
+    <div class="realPopulation">
+        <div class="populationView_text">
+            <span class="firstBox text_population">实有人口</span>
+            <span
+                    class="firstBox text_icon">/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/</span>
+        </div>
+
+        <div class="container">
+            <div class="comment populationNumber">
+                <span class="columnar"></span>
+                <span class="number">250685</span>
+                <p class="text-num">实有人口（人）</p>
+            </div>
+
+            <div class="comment birthRate">
+                <span class="columnar"></span>
+                <span class="number">12.6%</span>
+                <p class="text-num">人口出生率</p>
+            </div>
+
+            <div class="comment deathRate">
+                <span class="columnar"></span>
+                <span class="number">57.0%</span>
+                <p class="text-num">人口死亡率</p>
+            </div>
+        </div>
+        <div id="population" class="population"></div>
+    </div>
+
+    <!-- 人口结构 -->
+    <div class="populationStructure">
+        <div class="populationView_text">
+            <span class="firstBox text_population">人口结构</span>
+            <span
+                    class="firstBox text_icon">/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/</span>
+        </div>
+        <div class="male">
+            <span class="genderIcon genderIcon-nan1"></span>
+            <span>男性</span>
+        </div>
+        <div class="female">
+            <span class="genderIcon genderIcon-nv1"></span>
+            <span>女性</span>
+        </div>
+        <div id="structure" class="structure"></div>
+    </div>
+
+    <!-- 老龄化分析 -->
+    <div class="aging">
+        <div class="populationView_text">
+            <span class="firstBox text_population">老龄化分析</span>
+            <span
+                    class="firstBox text_icon">/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/&nbsp;/</span>
+        </div>
+        <span class="man_icon genderIcon genderIcon-nan"></span>
+        <span class="woman_icon genderIcon genderIcon-nv"></span>
+        <div class="man_display">
+            <span class="genderIcon genderIcon-nan"></span>
+            <span>38.53%</span>
+        </div>
+        <div class="woman_display">
+            <span class="genderIcon genderIcon-nv"></span>
+            <span>61.49%</span>
+        </div>
+
+        <div id="agingAnalysis" class="agingAnalysis"></div>
+    </div>
+</div>
+<div class="infoview2" id="osgb" style="visibility: hidden;">
+    <input type="button" class="btn btn-primary" value="开始漫游" onclick="StartPlay()"/>
+    <input type="button" class="btn btn-primary" value="提示" onclick="helpalert()"/>
+
+</div>
+<div class="infoview3" id="water" style="visibility: hidden;">
+    <div class="col col-sm-12">
+        闸门：
+        <div class="checkbox checkbox-primary checkbox-inline">
+            <input id="selecteAll" class="styled" type="checkbox" checked/>
+            <label for="selecteAll"> 全选 </label>
+        </div>
+
+        <div class="checkbox checkbox-primary checkbox-inline">
+            <input id="gate_13" class="styled chkZMKZ" type="checkbox" data-id="13" checked/>
+            <label for="gate_13"> 13号 </label>
+        </div>
+        <div class="checkbox checkbox-primary checkbox-inline">
+            <input id="gate_12" class="styled chkZMKZ" type="checkbox" data-id="12" checked/>
+            <label for="gate_12"> 12号 </label>
+        </div>
+
+        <div class="checkbox checkbox-primary checkbox-inline">
+            <input id="gate_11" class="styled chkZMKZ" type="checkbox" data-id="11" checked/>
+            <label for="gate_11"> 11号 </label>
+        </div>
+
+        <div class="checkbox checkbox-primary checkbox-inline">
+            <input id="gate_10" class="styled chkZMKZ" type="checkbox" data-id="10" checked/>
+            <label for="gate_10"> 10号 </label>
+        </div>
+
+        <div class="checkbox checkbox-primary checkbox-inline">
+            <input id="gate_9" class="styled chkZMKZ" type="checkbox" data-id="9" checked/>
+            <label for="gate_9"> 9号 </label>
+        </div>
+        &nbsp;&nbsp;
+
+        <div class="checkbox checkbox-primary checkbox-inline">
+            <input id="gate_8" class="styled chkZMKZ" type="checkbox" data-id="8" checked/>
+            <label for="gate_8"> 8号 </label>
+        </div>
+
+        <div class="checkbox checkbox-primary checkbox-inline">
+            <input id="gate_7" class="styled chkZMKZ" type="checkbox" data-id="7" checked/>
+            <label for="gate_7"> 7号 </label>
+        </div>
+
+        <div class="checkbox checkbox-primary checkbox-inline">
+            <input id="gate_6" class="styled chkZMKZ" type="checkbox" data-id="6" checked/>
+            <label for="gate_6"> 6号 </label>
+        </div>
+
+        <div class="checkbox checkbox-primary checkbox-inline">
+            <input id="gate_5" class="styled chkZMKZ" type="checkbox" data-id="5" checked/>
+            <label for="gate_5"> 5号 </label>
+        </div>
+
+        <div class="checkbox checkbox-primary checkbox-inline">
+            <input id="gate_4" class="styled chkZMKZ" type="checkbox" data-id="4" checked/>
+            <label for="gate_4"> 4号 </label>
+        </div>
+        <div class="checkbox checkbox-primary checkbox-inline">
+            <input id="gate_3" class="styled chkZMKZ" type="checkbox" data-id="3" checked/>
+            <label for="gate_3"> 3号 </label>
+        </div>
+        <div class="checkbox checkbox-primary checkbox-inline">
+            <input id="gate_2" class="styled chkZMKZ" type="checkbox" data-id="2" checked/>
+            <label for="gate_2"> 2号 </label>
+        </div>
+        <div class="checkbox checkbox-primary checkbox-inline">
+            <input id="gate_1" class="styled chkZMKZ" type="checkbox" data-id="1" checked/>
+            <label for="gate_1"> 1号 </label>
+        </div>
+    </div>
+</div>
+<div class="infoview4" id="bdv" style="visibility: hidden;">
+</div>
+<div id="JSTEXT" class="infoview infoview-js">
+    <div class="infoview_panel">
+        <div class="infoview_panel_scroll">
+            <div class="title">华水智慧水利大数据平台</div>
+            <div id="login-box">
+                <h1 id="loginlab">登录</h1>
+                <div class="form">
+                    <div class="item">
+                        <!-- <i class="fa fa-github-alt" style="font-size:24px"></i> -->
+                        <label for="username"></label><input id="username" type="text" placeholder="用户名">
+                    </div>
+                    <div class="item">
+                        <!-- <i class="fa fa-search" style="font-size:24px"></i> -->
+                        <label for="password"></label><input id="password" type="password" placeholder="密码">
+                    </div>
+                    <br/>
+                    <div style="font-size:10px;">华北水利水电大学刘文锴团队出品</div>
+                </div>
+                <br/>
+
+            </div>
+
+        </div>
+        <div id="checkin" class="btnbar_item" onclick="loadin()">开始使用</div>
+    </div>
+
+    <script type="text/javascript" src="main.js">
+
+    </script>
+
+</div>
+</body>
+
 </html>

@@ -1,6 +1,7 @@
 /*
 * indexé¡µé¢css
 */
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -101,6 +102,7 @@ li {
   text-decoration: none;
   margin-top: 1px;
   margin-right: 2px;
+
 }
 
 .dark a:hover {
@@ -367,7 +369,122 @@ li {
 .infoview > div {
   margin-top: 5px;
 }
+.infoview2 {
+  position: absolute;
+  top: 80px;
+  left: 10px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 14px rgba(128, 128, 128, 0.5);
+  z-index: 19870101;
+}
+.infoview2-right {
+  left: auto;
+  right: 10px;
+}
 
+.infoview2 input,
+.infoview2 select,
+.infoview2 textarea {
+  color: #ffffff;
+  background-color: rgba(32, 160, 255, 0.2);
+  border: 1px solid #e4eaec;
+  font-size: 14px;
+}
+
+.infoview2 > div {
+  margin-top: 5px;
+}
+.infoview3 {
+  position: absolute;
+  top: 80px;
+  left: 10px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 14px rgba(128, 128, 128, 0.5);
+  z-index: 19870101;
+}
+.infoview3-right {
+  left: auto;
+  right: 10px;
+}
+
+.infoview3 input,
+.infoview3 select,
+.infoview3 textarea {
+  color: #ffffff;
+  background-color: rgba(32, 160, 255, 0.2);
+  border: 1px solid #e4eaec;
+  font-size: 14px;
+}
+
+.infoview3 > div {
+  margin-top: 5px;
+}
+.infoview4 {
+  position: absolute;
+  top: 80px;
+  left: 10px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 14px rgba(128, 128, 128, 0.5);
+  z-index: 19870101;
+}
+.infoview4-right {
+  left: auto;
+  right: 10px;
+}
+
+.infoview4 input,
+.infoview4 select,
+.infoview4 textarea {
+  color: #ffffff;
+  background-color: rgba(32, 160, 255, 0.2);
+  border: 1px solid #e4eaec;
+  font-size: 14px;
+}
+
+.infoview4 > div {
+  margin-top: 5px;
+}
+.infoview5 {
+  position: absolute;
+  top: 80px;
+  left: 10px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 14px rgba(128, 128, 128, 0.5);
+  z-index: 19870101;
+}
+.infoview5-right {
+  left: auto;
+  right: 10px;
+}
+
+.infoview5 input,
+.infoview5 select,
+.infoview5 textarea {
+  color: #ffffff;
+  background-color: rgba(32, 160, 255, 0.2);
+  border: 1px solid #e4eaec;
+  font-size: 14px;
+}
+
+.infoview5 > div {
+  margin-top: 5px;
+}
 .info-tips {
   margin: 5px 10px 20px 10px;
 }
@@ -493,3 +610,74 @@ html {
   width:  auto;
 }
 */
+#login-box{
+  width:80%;
+  height:50%;
+  margin: 20% auto 0;
+  text-align:center;
+  /* background:#00000060; */
+  padding:20px 50px;
+  border: 2px solid #03717b;
+  border-radius: 20px;
+  overflow:hidden ;
+  }
+#login-box h1{
+  color:#fff;
+}
+#login-box .form .item{
+  margin-top:15px;
+}
+#login-box .form .item i{
+  font-size:18px;
+  color:#fff;
+}
+#login-box .form .item input{
+  width:90%;
+  font-size:18px;
+  border:0;
+  border-bottom:2px solid #03717b;
+  padding:5px 10px;
+  background:#ffffff00;
+  color:#fff;
+}
+#login-box 	button{
+  margin-top:20px;
+  width:190px;
+  height:30px;
+  font-size:20px;
+  font-weight:700;
+  color:#fff;
+  background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+  border:0;
+  border-radius:15px;
+}
+#container {
+	width: 400px;
+	height: 220px;
+	overflow: hidden;
+  margin: 10px auto;
+}
+ 
+#photo {
+	width: 1200px;
+	animation: switch 5s ease-out infinite;
+}
+ 
+#photo > img {
+	float: left;
+	width: 400px;
+	height: 300px;
+}
+ 
+@keyframes switch {
+	0%, 25% {
+		margin-left: 0;
+	}
+	35%, 60% {
+		margin-left: -400px;
+	}
+	70%, 100% {
+		margin-left: -800px;
+	}
+}
+
